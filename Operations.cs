@@ -48,5 +48,22 @@ namespace LinkedList
             newnode.next = head;
             this.head = newnode;
         }
+        public void Append(int Data)
+        {
+            Node newnode = new Node(Data);
+            if(head == null)
+            {
+                head = newnode;
+            }
+            else
+            {
+                Node temp=head;
+                while(temp.next != null)
+                {
+                    temp=temp.next;
+                }
+                temp.next=newnode;
+            }
+        }
     }
 }
