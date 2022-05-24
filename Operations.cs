@@ -37,10 +37,16 @@ namespace LinkedList
             }
             while(temp != null)
             {
-                Console.WriteLine(temp.data + " ");
+                Console.Write(temp.data + " -> ");
                 temp = temp.next;
             }
 
+        }
+        public void InsertFront(int Data)
+        {
+            Node newnode = new Node(Data);
+            newnode.next = head;
+            this.head = newnode;
         }
     }
 }
