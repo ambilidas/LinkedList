@@ -30,12 +30,18 @@ namespace LinkedList
             //operationsobj.Pop();
             //operationsobj.Display();
 
+            //operationsobj.Add(56);
+            //operationsobj.Add(30);
+            //operationsobj.Add(70);
+            //operationsobj.Display();
+            //operationsobj.PopLast();
+            //operationsobj.Display();
+
             operationsobj.Add(56);
             operationsobj.Add(30);
             operationsobj.Add(70);
             operationsobj.Display();
-            operationsobj.PopLast();
-            operationsobj.Display();
+            operationsobj.Search(30); 
             Console.ReadKey();  
 
         }

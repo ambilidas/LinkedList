@@ -124,5 +124,17 @@ namespace LinkedList
             Console.WriteLine("\nLast element is deleted from the list");
 
         }
+        public void Search(int value)
+        {
+            while (this.head != null)
+            {
+                if (this.head.data == value)
+                {
+                    Console.WriteLine("\n {0} is present in linked list", value);
+                }
+                this.head = this.head.next;
+            }
+            
+        }
     }
 }
