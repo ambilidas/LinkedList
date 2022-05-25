@@ -27,6 +27,9 @@ namespace LinkedList
             operationsobj.Add(70);
             operationsobj.InsertInBetween(2,30);
             operationsobj.Display();
+            operationsobj.Pop();
+            operationsobj.Display();
+            Console.ReadKey();  
 
         }
     }

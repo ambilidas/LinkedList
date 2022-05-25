@@ -96,5 +96,14 @@ namespace LinkedList
                 }
             }
         }
+        public void Pop()
+        {
+            if(this.head == null)
+            {
+                Console.WriteLine("Linked list is empty!!");
+            }
+            this.head = this.head.next;
+            Console.WriteLine("\nFirst element is deleted from the list");
+        }
     }
 }
