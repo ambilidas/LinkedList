@@ -65,5 +65,36 @@ namespace LinkedList
                 temp.next=newnode;
             }
         }
+        public void InsertInBetween(int position,int Data)
+        {
+           if(position < 1)
+            {
+                Console.WriteLine("Invalid Position");
+            }
+           if(position == 1)
+            {
+                Node newnode=new Node(Data);
+                newnode.next=this.head;
+                head = newnode;
+            }
+            else
+            {
+                while(position-- != 0)
+                {
+                    if(position == 1)
+                    {
+                        Node node=new Node(Data);
+                        node.next=this.head.next;
+                        head.next=node;
+                        break;
+                    }
+                    head=head.next;
+                }
+                if(position != 1)
+                {
+                    Console.WriteLine("Position is out of range");
+                }
+            }
+        }
     }
 }

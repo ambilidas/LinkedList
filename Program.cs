@@ -17,9 +17,15 @@ namespace LinkedList
             //operationsobj.InsertFront(30);
             //operationsobj.InsertFront(56);
             //operationsobj.Display();
+
+            //operationsobj.Add(56);
+            //operationsobj.Append(30);
+            //operationsobj.Append(70);
+            //operationsobj.Display();
+
             operationsobj.Add(56);
-            operationsobj.Append(30);
-            operationsobj.Append(70);
+            operationsobj.Add(70);
+            operationsobj.InsertInBetween(2,30);
             operationsobj.Display();
 
         }
