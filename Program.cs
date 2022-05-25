@@ -23,11 +23,18 @@ namespace LinkedList
             //operationsobj.Append(70);
             //operationsobj.Display();
 
+            //operationsobj.Add(56);
+            //operationsobj.Add(70);
+            //operationsobj.InsertInBetween(2,30);
+            //operationsobj.Display();
+            //operationsobj.Pop();
+            //operationsobj.Display();
+
             operationsobj.Add(56);
+            operationsobj.Add(30);
             operationsobj.Add(70);
-            operationsobj.InsertInBetween(2,30);
             operationsobj.Display();
-            operationsobj.Pop();
+            operationsobj.PopLast();
             operationsobj.Display();
             Console.ReadKey();  
 

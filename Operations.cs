@@ -105,5 +105,24 @@ namespace LinkedList
             this.head = this.head.next;
             Console.WriteLine("\nFirst element is deleted from the list");
         }
+        public void PopLast()
+        {
+            if(head == null)
+            {
+                Console.WriteLine("Linked list is empty!!");
+            }
+            if(head.next == null)
+            {
+                Console.WriteLine("Linked list is empty!!");
+            }
+            Node newnode = head;
+            while(newnode.next.next != null)
+            {
+                newnode = newnode.next;
+            }
+            newnode.next = null;
+            Console.WriteLine("\nLast element is deleted from the list");
+
+        }
     }
 }
