@@ -49,13 +49,22 @@ namespace LinkedList
             operationsobj.Add(30);
             operationsobj.Add(70);
             operationsobj.Display();
+
+            //searching for data
+            operationsobj.Search(30);
+
             operationsobj.InsertInBetween(3, 40);
             Console.WriteLine("\nAdding 40 after 30 ");
             operationsobj.Display();
-            //Console.WriteLine("\n" + operationsobj.Search(30).data + " is present in list");
 
+            //delete 40 from list
+            operationsobj.Delete(40);
+            Console.WriteLine("\n");
+            operationsobj.Display();
 
-            Console.ReadKey();  
+            //getting size of linked list
+            Console.WriteLine("\nsize of linked list: " + operationsobj.Size()); 
+             Console.ReadKey();  
 
         }
     }

@@ -37,7 +37,7 @@ namespace LinkedList
             }
             while(temp != null)
             {
-                Console.Write(temp.data + " -> ");
+                Console.Write( temp.data + " -> ");
                 temp = temp.next;
             }
 
@@ -116,19 +116,51 @@ namespace LinkedList
             Console.WriteLine("\nLast element is deleted from the list");
 
         }
-        public Node Search(int value)
+        public bool Search(int value)
         {
-            while (this.head != null)
+            int index = 0;
+            Node temp = head;
+            while (temp != null)
             {
-                if (this.head.data == value)
+                index++;
+                if (temp.data.Equals(value))
                 {
-                    return this.head;
-                   // Console.WriteLine("\n {0} is present in linked list", value);
+                    Console.WriteLine("\n"+ value + " is Found At Index = " + index);
+                    return true;
                 }
-                this.head = this.head.next;
+                temp = temp.next;
             }
-            return null;
-            
+            return false;
+        }
+        //Delete elements from LinkedList 
+        public void Delete(int data)
+        {
+            Node temp = head, previous = null;
+            if (temp != null && temp.data == data)
+            {
+                head = temp.next;
+                return;
+            }
+            while (temp != null && temp.data != data)
+            {
+                previous = temp;
+                temp = temp.next;
+            }
+            if (temp == null)
+                return;
+            previous.next = temp.next;
+        }
+        //Get Size of Linked List
+        public int Size()
+        {
+            int size = 0;
+            Node temp = head;
+            while (temp != null)
+            {
+                size++;
+                temp = temp.next;
+            }
+            return size;
         }
     }
 }
