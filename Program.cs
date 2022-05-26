@@ -45,25 +45,34 @@ namespace LinkedList
             //operationsobj.PopLast();
             //operationsobj.Display();
 
-            operationsobj.Add(56);
-            operationsobj.Add(30);
-            operationsobj.Add(70);
-            operationsobj.Display();
+            //operationsobj.Add(56);
+            //operationsobj.Add(30);
+            //operationsobj.Add(70);
+            //operationsobj.Display();
 
             //searching for data
-            operationsobj.Search(30);
+            //operationsobj.Search(30);
 
-            operationsobj.InsertInBetween(3, 40);
-            Console.WriteLine("\nAdding 40 after 30 ");
-            operationsobj.Display();
+            //operationsobj.InsertInBetween(3, 40);
+            //Console.WriteLine("\nAdding 40 after 30 ");
+            //operationsobj.Display();
 
             //delete 40 from list
-            operationsobj.Delete(40);
-            Console.WriteLine("\n");
-            operationsobj.Display();
+            //operationsobj.Delete(40);
+            //Console.WriteLine("\n");
+            //operationsobj.Display();
 
             //getting size of linked list
-            Console.WriteLine("\nsize of linked list: " + operationsobj.Size()); 
+           // Console.WriteLine("\nsize of linked list: " + operationsobj.Size());
+
+            //Sorted linked list
+            Console.WriteLine("Data in sorted linked list");
+            SortedLinkedList sortedLinkedListobj = new SortedLinkedList();
+            sortedLinkedListobj.Add(56);
+            sortedLinkedListobj.Add(30);
+            sortedLinkedListobj.Add(40);
+            sortedLinkedListobj.Add(70);
+            sortedLinkedListobj.Display();
              Console.ReadKey();  
 
         }
