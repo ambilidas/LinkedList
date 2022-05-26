@@ -67,33 +67,25 @@ namespace LinkedList
         }
         public void InsertInBetween(int position,int Data)
         {
-           if(position < 1)
-            {
+            Node node = new Node(Data);
+            if (position < 1)
                 Console.WriteLine("Invalid Position");
-            }
-           if(position == 1)
+            else if (position == 1)
             {
-                Node newnode=new Node(Data);
-                newnode.next=this.head;
-                head = newnode;
+                node.next = head;
+                head = node;
             }
             else
             {
-                while(position-- != 0)
+                Node temp = head;
+
+                while (position > 2)
                 {
-                    if(position == 1)
-                    {
-                        Node node=new Node(Data);
-                        node.next=this.head.next;
-                        head.next=node;
-                        break;
-                    }
-                    head=head.next;
+                    temp = temp.next;
+                    position--;
                 }
-                if(position != 1)
-                {
-                    Console.WriteLine("Position is out of range");
-                }
+                node.next = temp.next;
+                temp.next = node;
             }
         }
         public void Pop()
@@ -124,16 +116,18 @@ namespace LinkedList
             Console.WriteLine("\nLast element is deleted from the list");
 
         }
-        public void Search(int value)
+        public Node Search(int value)
         {
             while (this.head != null)
             {
                 if (this.head.data == value)
                 {
-                    Console.WriteLine("\n {0} is present in linked list", value);
+                    return this.head;
+                   // Console.WriteLine("\n {0} is present in linked list", value);
                 }
                 this.head = this.head.next;
             }
+            return null;
             
         }
     }

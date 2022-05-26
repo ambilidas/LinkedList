@@ -8,25 +8,33 @@ namespace LinkedList
         {
             Console.WriteLine("Program for creating Linked List");
             Operations operationsobj = new Operations();
+            //Simple linked list is created
             //operationsobj.Add(56);
             //operationsobj.Add(30);
             //operationsobj.Add(70);
             //operationsobj.Display();
-            //Console.WriteLine("----------------");
+
+            //Elements are added to front
             //operationsobj.Add(70);
             //operationsobj.InsertFront(30);
             //operationsobj.InsertFront(56);
             //operationsobj.Display();
 
+            //Appending elements
             //operationsobj.Add(56);
             //operationsobj.Append(30);
             //operationsobj.Append(70);
             //operationsobj.Display();
 
+            //data inserted between particular position
             //operationsobj.Add(56);
             //operationsobj.Add(70);
-            //operationsobj.InsertInBetween(2,30);
             //operationsobj.Display();
+            //operationsobj.InsertInBetween(2, 30);
+            //Console.WriteLine("\n");
+            //operationsobj.Display();
+
+            //deleting first element
             //operationsobj.Pop();
             //operationsobj.Display();
 
@@ -41,7 +49,12 @@ namespace LinkedList
             operationsobj.Add(30);
             operationsobj.Add(70);
             operationsobj.Display();
-            operationsobj.Search(30); 
+            operationsobj.InsertInBetween(3, 40);
+            Console.WriteLine("\nAdding 40 after 30 ");
+            operationsobj.Display();
+            //Console.WriteLine("\n" + operationsobj.Search(30).data + " is present in list");
+
+
             Console.ReadKey();  
 
         }
